@@ -1,29 +1,25 @@
 import React from 'react'
+import {Link} from 'react-router-dom';
+
 
   function Navbar() {
   return (
     <div>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="/navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <nav className="navbar navbar-expand-lg navbar-dark bg-success">
+  <div className="container-fluid">
+    <Link className="navbar-brand fs-1 fst-italic" to="/">GoFood</Link>
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="/navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
+    <div className="collapse navbar-collapse" id="navbarNav">
+      <ul className="navbar-nav">
+        <li className="nav-item">
+          <Link className="nav-link active" aria-current="page" to="/">Home</Link>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/">Features</a>
+        <li className="nav-item">
+          <Link className="nav-link" to="/login">Login</Link>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="/" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
+         </ul>
     </div>
   </div>
 </nav>
