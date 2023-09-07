@@ -21,6 +21,8 @@ Tailwind CSS
 Postman
 
 
+### Bootstrap
+Download the bootstrap to make css look better on front page
 
 
 # Getting Started with Create React App
