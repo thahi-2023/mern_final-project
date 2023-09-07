@@ -1,3 +1,28 @@
+### Food Ordering App ###
+
+Description
+Iroduction
+-------------------------------------------------------------------------------------------------
+
+1.This food ordering app, Its totally for user friendly app.
+2. User can add their favourite food, and increse their quantity etc
+3. App can keep track of multiple users and their food order with login.
+
+Technologies Used:
+MongoDB
+Mongoose
+Express
+React+Vite
+Redux
+Node.js
+JavaScript
+HTML
+Tailwind CSS
+Postman
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
