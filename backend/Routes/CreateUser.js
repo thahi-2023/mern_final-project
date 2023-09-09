@@ -7,10 +7,10 @@ const User = require('../models/User')
 router.post("/createuser", async (req, res)=>{
     try{
          await User.create({
-            name: "James",
-            location: "Wall Street",
-            email:"james123 @ gmail.com",
-            password: "123456"
+            name: req.body.name,
+            location: req.body.location,
+            email:req.body.email,
+            password: req.body.password
 
         })
        //sending json response 
@@ -22,6 +22,8 @@ router.post("/createuser", async (req, res)=>{
 
     }
 })
+
+module.exports = router;
 
 
 
