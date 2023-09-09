@@ -12,7 +12,7 @@ const mongoDB = () => {
       const fetched_data =  mongoose.connection.db.collection("food_items")
    fetched_data.find({}).toArray(function( err, data){
     if (err) console.log(err);
-    else console.log(data);
+    else console.log();
    })
 
    })
