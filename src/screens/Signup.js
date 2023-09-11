@@ -1,11 +1,17 @@
 import React from 'react'
 
+
 function Signup() {
+    const handleSubmit = ()=>{
+        
+    }
   return (
     <div>
         <>
         <div className="container">
-        <form>
+            
+        <form onSubmit={handleSubmit}>
+    
 
         <div className="mb-3">
     <label for="name" className="form-label">Name</label>
