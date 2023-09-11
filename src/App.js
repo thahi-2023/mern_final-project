@@ -11,6 +11,7 @@ import {
   Route
 } from "react-router-dom";
 import Login from './screens/Login';
+import Signup from './screens/Signup';
 
 
 
@@ -21,6 +22,7 @@ function App() {
       <Routes>
         <Route exact path='/' element={<Home/>}/> 
         <Route exact path='/login' element={<Login/>}/>
+        <Route exact path='/creatuser' element={<Signup/>}/> 
       </Routes>
     </div>
     </Router>

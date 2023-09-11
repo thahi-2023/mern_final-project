@@ -13,23 +13,25 @@ Introduction
 https://github.com/thahi-2023/mern_final-project
 
 ### Technologies Used:
-MongoDB
-Mongoose
-Express
-React+Vite
-Redux
-Node.js
-JavaScript
-HTML
-Tailwind CSS
-Postman
+ 1.MongoDB.
+ Mongoose.
+ Express.
+ React+Vite.
+ Redux.
+  Node.js.
+  JavaScript.
+  HTML.
+  
+  Thunder client.
+  
 
 
 ### Getting Started ###
-Trello
-using trello board to display my work
-currently what I am doing 
-when I done I m changing my Card
+Trello:-
+
+using trello board to display my work.
+currently what I am doing .
+when I done I m changing my Card.
 
 https://trello.com/b/jkYfw8y5/trello-food-app
 
@@ -57,7 +59,7 @@ used bootstrap to get night mode using this link
 
 
 
-T
+
 
 
 
