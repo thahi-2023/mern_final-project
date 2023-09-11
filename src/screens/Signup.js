@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 
 function Signup() {
-    const handleSubmit = ()=>{
-        
+      const [credentials, setcredentials] = useState({name:"",email:"",password:"",geolocation:""})
+    const handleSubmit = async(e)=>{
+        e.preventDefault();
+        const response = fetch("http://localhost:5000/api/createuser",{
+            method:'Post',
+            header:{
+                'Content-Type':"application/json"
+            },
+            body:JSON.stringlfy()
+
+        })
+
     }
   return (
     <div>
@@ -26,7 +37,8 @@ function Signup() {
     <label for="exampleInputPassword1" className="form-label">Password</label>
     <input type="password" className="form-control" id="exampleInputPassword1"/>
   </div>
-  <button type="submit" className="btn btn-primary">Submit</button>
+  <button type="submit" className="btn btn-success">Submit</button>
+  <Link to="/login" className='m-3 btn btn-danger'>Already a user</Link>
 </form>
 </div>
 
