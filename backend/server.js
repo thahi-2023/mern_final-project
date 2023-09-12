@@ -11,7 +11,7 @@ app.get('/', (req, res)=> {
     res.send('Hello!')
 })
 
-//middleware routes
+//show  routes
 app.use(express.json())
 app.use('/api', require("./Routes/CreateUser"))
 
