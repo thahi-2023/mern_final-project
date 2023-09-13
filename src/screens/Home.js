@@ -39,11 +39,15 @@ function Home() {
                     //food category not equal to then do map
                     ! foodCat  == []
                         ? foodCat.map((data) => {
-                            return (
-                                <div>{data.CategoryName}</div>
+                            return ( <div>
+                                <div key={data._id} className="fs-3 m-3">
+                                    {data.CategoryName}
+                                    </div>
+                                    <hr/>
+                                    </div>
                             )
                         })
-                        : <div> """""" </div>
+                        :  ""
                 }
                 <Card />
 
