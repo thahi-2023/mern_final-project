@@ -5,7 +5,12 @@ const User = require('../models/User')
 // ... rest of the initial code omitted for simplicity
 const { body, validationResult } = require('express-validator');
 
-
+//generate json token 
+const jwt = require("jsonwebtoken")
+//bcrypt to secure password
+const bcrypt = require("bcryptjs");
+//secure password store in jwtsecret
+const jwtSecret = "MynameisEndtoEndYoutubeChannel$#"
 
 //create User route
 router.post("/createuser",[
@@ -26,16 +31,20 @@ router.post("/createuser",[
 
     }
 
+    // using bycrypt to secure password
+    const salt = await bcrypt.genSalt(10)
+    let secPassword = await bcrypt.hash(req.body.password, salt)
+
     try{
          await User.create({
             name: req.body.name,
             location: req.body.location,
             email:req.body.email,
-            password: req.body.password
+            password: secPassword
 
         })
        //sending json response 
-      .then( res.json({success:true}))
+      .then( res.json({success: true}))
 
     }catch (error){
         console.log(error);
@@ -65,10 +74,24 @@ router.post("/createuser",[
             if (!userData){
                 return res.status(400).json({errors: "Try logging with valid credentials"})
             }
-            if ( !req.body.password  == userData.password){
+
+            //compare userpassword  with userdata
+            const pwdCompare = await bcrypt.compare(req.body.password,userData.password)
+            //userData coming from mongoDb
+            if ( !pwdCompare){
                 return res.status(400).json({errors: "Try logging with valid credentials"})
             }
-            return res.json({ success:true})
+
+            //get id from mogodb and store it in user
+              const data ={
+                user: {
+                    id:userData.id
+                  }
+              }
+
+
+            const authToken = jwt.sign(data,jwtSecret)
+            return res.json({ success: true,authToken:authToken})
 
             }catch (error){
            console.log(error);
