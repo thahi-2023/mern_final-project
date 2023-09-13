@@ -89,7 +89,7 @@ router.post("/createuser",[
                   }
               }
 
-
+//authtoken will create differnt data for password every time user login, so it can be stored safe
             const authToken = jwt.sign(data,jwtSecret)
             return res.json({ success: true,authToken:authToken})
 
