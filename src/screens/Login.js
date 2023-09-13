@@ -24,6 +24,10 @@ function Login() {
           alert ("Enter Valid Credentials")
       }
       if(json.success){
+        //storing value in auth token using localstorage
+        localStorage.setItem("authToken",json.authToken)
+        //console to check data saved on localstorage
+        console.log(localStorage.getItem("authToken"))
         navigate("/");
       }
 
