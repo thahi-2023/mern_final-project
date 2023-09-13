@@ -39,7 +39,7 @@ function Home() {
                     //food category not equal to then do map
                     ! foodCat  === []
                         ? foodCat.map((data) => {
-                            return ( <div>
+                            return ( <div className='row mb-3'>
                                 <div key={data._id} className="fs-3 m-3">
                                     {data.CategoryName}
                                     </div>
@@ -49,8 +49,12 @@ function Home() {
                                     foodItem.filter((item)=> item.CategoryName === data.CategoryName)
                                     .map(filterItems => {
                                         return(
-                                            <div key={filterItems._id}>
-                                                 <Card></Card>
+                                            <div key={filterItems._id} className="col-12 col-md-6 col-lg-3">
+                                                 <Card foodName = {filterItems.foodName}
+                                                 options={filterItems.options[0]}
+                                                 imgSrc={filterItems.img}
+                                                 
+                                                 ></Card>
                                                  </div>
                                         )
                                     })
