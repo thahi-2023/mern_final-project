@@ -1,8 +1,10 @@
 import React from 'react'
+import { useDispatchCart, useCart } from './ContextReducer'
 
 function Card(props) {
     let options = props.options;
     let priceOptions = Object.keys(options)
+   // let foodItem = props.foodItems;
 
     const handleAddToCart = ()=> {
 
@@ -11,9 +13,9 @@ function Card(props) {
     <div>
          <div>
         <div className="card mt-3" style={{"width": "18rem", "maxHeight": "360"}}>
-            <img src={props.imgSrc} className="card-img-top" alt="..." style={{ height: "120px", objectFit: "fill"}}/>
+            <img src={props.foodItem.img} className="card-img-top" alt="..." style={{ height: "120px", objectFit: "fill"}}/>
             <div classNmae="card-body">
-                <h5 className="card-title">{props.foodName}</h5>
+                <h5 className="card-title">{props.foodItem.name}</h5>
                 
                 
                 <div className='container w-100'>

@@ -12,6 +12,7 @@ import {
 } from "react-router-dom";
 import Login from './screens/Login';
 import Signup from './screens/Signup';
+import { CartProvider } from './components/ContextReducer';
 
 
 
@@ -27,7 +28,7 @@ function App() {
       </Routes>
     </div>
     </Router>
-    </CartProvider>
+   </CartProvider>
   );
 }
 
