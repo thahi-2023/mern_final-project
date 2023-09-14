@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Card from '../components/Card'
-import Carousal from '../components/Carousal'
+
 
 function Home() {
-
+    const [search,setSearch]= useState('')
     const [foodCat, setFoodCat] = useState([])
     const [foodItem, setFoodItem] = useState([])
 
@@ -35,10 +35,10 @@ function Home() {
             <div> <div id="carouselExampleFade" className="carousel slide carousel-fade " data-bs-ride="carousel" style={{objectFit:"contain !important"}}> 
 <div className="carousel-inner " id='carousel'>
     <div class=" carousel-caption  " style={{ zIndex: "10" }}>
-        <form className=" d-flex justify-content-center">  {/* justify-content-center, copy this <form> from navbar for search box */}
-            <input className="form-control me-2 w-75 bg-white text-dark" type="search" placeholder="Search here..." aria-label="Search" />
-            <button className="btn btn-outline-success text-white bg-success" type="submit">Search</button>
-        </form>
+        <div className=" d-flex justify-content-center">  {/* justify-content-center, copy this <form> from navbar for search box */}
+            <input className="form-control me-2 w-75 bg-white text-dark" type="search" placeholder="Search here..." aria-label="Search" value={search} onChange={(e)=>{setSearch(e.target.value)}}/>
+            
+        </div>
     </div>
     <div className="carousel-item active" >
         <img src="https://source.unsplash.com/random/900x700/?burger" className="d-block w-100  " style={{ filter: "brightness(30%)" }} alt="..." />
@@ -61,7 +61,7 @@ function Home() {
 </div></div>
             <div className='container'>
 
-                {
+                {/* {
                     //food category not equal to then do map
                    ! foodCat  === []
                         ? foodCat.map((data) => {
@@ -72,7 +72,7 @@ function Home() {
                                     <hr/>
                                     {!foodItem  === []
                                     ? 
-                                    foodItem.filter((item)=> item.CategoryName === data.CategoryName)
+                                    foodItem.filter((item)=> item.CategoryName === data.CategoryName)&& (item.name.toLowerCase().includes(search.toLowerCase()))
                                     .map(filterItems => {
                                         return(
                                             <div key={filterItems._id} className="col-12 col-md-6 col-lg-3">
@@ -91,7 +91,7 @@ function Home() {
                         :  ""
                 }
                 <Card />
-
+ */}
 
 
             </div>
