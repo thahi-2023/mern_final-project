@@ -12,6 +12,9 @@
 
 https://github.com/thahi-2023/mern_final-project
 
+#### Scree shot of my app
+
+
 ### Technologies Used:
  * MongoDB.
  * Mongoose.
@@ -27,14 +30,17 @@ https://github.com/thahi-2023/mern_final-project
   
 
 
-### Getting Started ###
- ## Trello board 
+## Getting Started ###
+ ### Trello board 
+ IT includes...
 
 https://trello.com/b/jkYfw8y5/trello-food-app
 
  * using trello board to display my work.
-* currently what I am doing .
- * when I done I m changing my Card.
+
+* ERD MODEL: https://www.figma.com/file/TpITqj4KWG8SduWIdIkYgE/Untitled?type=design&node-id=1-22&mode=design&t=Id6OYLvb7klyhBZG-0
+ * 
+##  
 
 ### Bootstrap
 Download the bootstrap to make css look better on front page
@@ -44,15 +50,17 @@ Download the bootstrap to make css look better on front page
 used bootstrap to get night mode using this link
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.1.3/dist/css/bootstrap-night.min.css" rel="stylesheet">
 
-#### Scree shot of my app
+
 
 ### Unsolved problem
+* I tried to DEploy my project using both frontend and backend. couldn't figure it out
+* tried to add Nutrientient value of my food, but couldn't 
 
 ### Future Enhancement
 Some of the upcoming Features in this app includes
 
 * User can experience new Continental Breakfast Chair,Asian food and dessert of their choice
-
+* Plan to Use API that allows user to see an food orders
 
 
 

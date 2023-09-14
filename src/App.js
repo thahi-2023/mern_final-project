@@ -17,6 +17,7 @@ import Signup from './screens/Signup';
 
 function App() {
   return (
+    <CartProvider>
     <Router>
     <div> 
       <Routes>
@@ -26,6 +27,7 @@ function App() {
       </Routes>
     </div>
     </Router>
+    </CartProvider>
   );
 }
 
