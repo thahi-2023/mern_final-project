@@ -3,6 +3,10 @@ import React from 'react'
 function Card(props) {
     let options = props.options;
     let priceOptions = Object.keys(options)
+
+    const handleAddToCart = ()=> {
+
+    }
   return (
     <div>
          <div>
@@ -30,8 +34,11 @@ function Card(props) {
                 <div className='d-inline h-100 fs-5'>
                     Total Price
                 </div>
+                </div>
+                <hr>
+                </hr>
+                <button className={`btn btn-success justify-center ms-2`} onClick={handleAddToCart}> Add to Cart</button>
 
-            </div>
             </div>
         </div>
       </div>
